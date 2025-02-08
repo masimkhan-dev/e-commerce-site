@@ -1,0 +1,58 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.popular h1 {
+    color: #171717;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.popular hr {
+    width: min(200px, 80%);
+    height: 6px;
+    border-radius: 10px;
+    background-color: #171717;
+    border: none;
+    margin: 0.5rem 0 2rem 0;
+}
+
+.popular-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Fully responsive */
+    gap: 2rem; /* Balanced spacing */
+    width: 100%;
+    max-width: 1200px; /* Ensures content stays within a readable width */
+    padding: 1rem;
+    margin: 0 auto; /* Centers content */
+    justify-content: center; /* Ensures items are centered */
+}
+
+.popular-item img {
+    width: 100%;            /* Makes the image fill the card horizontally */
+    height: auto;           /* Maintains the aspect ratio of the image */
+    object-fit: cover;      /* Ensures the image covers the area without distortion */
+    border-radius: 10px;    /* Optional: rounds the corners of the image */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .popular-item {
+        gap: 1.5rem; /* Adjust gap for tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .popular-item {
+        gap: 1rem; /* Adjust gap for mobile */
+    }
+}

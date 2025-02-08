@@ -1,0 +1,122 @@
+/* RelatedProduct.css */
+
+.relatedproducts {
+   
+    padding: 30px 30px;
+    margin-top: 50px;
+    margin-left: 75px;
+    
+  }
+  
+  .relatedproducts h1 {
+    font-size: 36px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .relatedproducts hr {
+    border: 1px solid #f0f0f0;
+    margin-bottom: 30px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .relatedproducts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0;
+  }
+  
+  .relatedproducts-container .item {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .relatedproducts-container .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .relatedproducts-container .item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+  margin-bottom: 10px;
+    
+    transition: transform 0.3s ease;
+  }
+  
+  .relatedproducts-container .item img:hover {
+    transform: scale(1.05);
+  }
+  
+  .relatedproducts-container .item .item-name {
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+  }
+  
+  .relatedproducts-container .item .item-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff5722;
+    margin-bottom: 10px;
+  }
+  
+  .relatedproducts-container .item .item-price span {
+    font-size: 16px;
+    color: #888;
+    text-decoration: line-through;
+    margin-left: 10px;
+  }
+  
+  .relatedproducts-container .item .item-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .relatedproducts-container .item .item-btn:hover {
+    background-color: #e64a19;
+  }
+  
+  @media (max-width: 768px) {
+    .relatedproducts-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .relatedproducts h1 {
+      font-size: 28px;
+    }
+  
+    .relatedproducts-container .item .item-name {
+      font-size: 18px;
+    }
+  
+    .relatedproducts-container .item .item-price {
+      font-size: 16px;
+    }
+  
+    .relatedproducts-container .item .item-btn {
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,84 @@
+.offers {
+    display: flex;
+    align-items: center; /* Vertically align content */
+    justify-content: space-between; /* Space out left and right sections */
+    width: 80%; /* Adjusted for better responsiveness */
+    max-width: 1200px; /* Prevent excessive width on larger screens */
+    height: auto; /* Allow dynamic height */
+    margin: 0 auto 150px; /* Center the section and add bottom spacing */
+    padding: 2rem; /* Provide consistent padding */
+    background: linear-gradient(180deg, #fde1ff 0%, #e1ffea 60%); /* Fixed gradient syntax */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.offers-left {
+    flex: 1; /* Ensure left section takes up equal space */
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: center;
+    padding: 1rem; /* Add internal spacing */
+}
+
+.offers-left h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem); /* Responsive font size */
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 0.5rem; /* Add spacing between headings */
+}
+
+.offers-left p {
+    font-size: 1rem; /* Standard paragraph font size */
+    color: #555;
+    margin-bottom: 1.5rem; /* Space between paragraph and button */
+    line-height: 1.5; /* Improve readability */
+}
+
+.offers-left button {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.offers-left button:hover {
+    background-color: #ff5345; /* Darken on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.offers-right {
+    flex: 1; /* Ensure right section takes up equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.offers-right img {
+    max-width: 100%; /* Ensure image doesn't exceed container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0.5rem; /* Slight rounding for consistency */
+   
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .offers {
+        flex-direction: column; /* Stack sections vertically */
+        padding: 1.5rem;
+    }
+
+    .offers-left, .offers-right {
+        flex: none;
+        width: 100%; /* Ensure full width for each section */
+        text-align: center; /* Center-align text for smaller screens */
+    }
+
+    .offers-right img {
+        max-width: 80%; /* Reduce image size for smaller screens */
+    }
+}

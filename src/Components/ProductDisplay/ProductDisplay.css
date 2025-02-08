@@ -1,0 +1,231 @@
+/* ProductDisplay.css */
+
+/* Main container for the product display */
+.productdisplay {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Left section - Product images */
+  .productdisplay-left {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .productdisplay-img-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .productdisplay-img-list img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .productdisplay-img-list img:hover {
+    transform: scale(1.05);
+    border-color: #007bff;
+  }
+  
+  .productdisplay-img {
+    flex: 1;
+  }
+  
+  .productdisplay-main-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Right section - Product details */
+  .productdisplay-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .productdisplay-right h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+  }
+  
+  .productdisplay-right-star {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .productdisplay-right-star img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .productdisplay-right-star span {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Price section */
+  .productdisplay-right-prices {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 10px;
+  }
+  
+  .productdisplay-right--price-old {
+    font-size: 1.25rem;
+    color: #999;
+    text-decoration: line-through;
+  }
+  
+  .productdisplay-right--price-new {
+    font-size: 1.5rem;
+    color: #ff4141;
+    font-weight: 600;
+  }
+  
+  /* Description section */
+  .productdisplay-right-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+  
+  /* Size selector section */
+  .product-display-right-size h1 {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 20px 0 10px 0;
+  }
+  
+  .productdisplay-right-size {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .productdisplay-right-size div {
+    padding: 12px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .productdisplay-right-size div:hover {
+    background-color: #f5f5f5;
+    border-color: #007bff;
+  }
+  
+  /* Add to Cart button */
+  .productdisplay-right button {
+    padding: 12px 24px;
+    background-color: #E74F41;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .productdisplay-right button:hover {
+    background-color: #ac6a4c;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .productdisplay {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .productdisplay-left {
+      flex-direction: column;
+    }
+  
+    .productdisplay-img-list {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .productdisplay-img-list img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .productdisplay-main-img {
+      max-width: 100%;
+    }
+  
+    .productdisplay-right h1 {
+      font-size: 2rem;
+    }
+  
+    .productdisplay-right-prices {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  
+    .productdisplay-right--price-old,
+    .productdisplay-right--price-new {
+      font-size: 1.25rem;
+    }
+  
+    .product-display-right-size h1 {
+      font-size: 1.1rem;
+    }
+  
+    .productdisplay-right-size div {
+      padding: 10px 16px;
+    }
+  
+    .productdisplay-right button {
+      width: 100%;
+      padding: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .productdisplay-right h1 {
+      font-size: 1.75rem;
+    }
+  
+    .productdisplay-right-star img {
+      width: 16px;
+      height: 16px;
+    }
+  
+    .productdisplay-right-star span {
+      font-size: 0.875rem;
+    }
+  
+    .productdisplay-right-description {
+      font-size: 0.875rem;
+    }
+  
+    .productdisplay-right-size div {
+      padding: 8px 12px;
+    }
+  }

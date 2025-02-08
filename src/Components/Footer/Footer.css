@@ -1,0 +1,138 @@
+/* Footer Container */
+.footer {
+  background-color: #1a1a2e;
+  color: #ffffff;
+  padding: 3rem clamp(1rem, 5%, 5rem); /* Responsive padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative; /* For potential decorative elements */
+  isolation: isolate; /* Modern stacking context */
+}
+
+/* Footer Logo and Company Name */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo img {
+  width: clamp(100px, 150px, 200px); /* Responsive sizing */
+  height: auto;
+  margin-block-end: 1rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother easing */
+  will-change: transform; /* Performance optimization */
+}
+
+.footer-logo p {
+  font-size: clamp(1.25rem, 1.5rem, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-block-end: 1.5rem;
+  text-wrap: balance; /* Modern text wrapping */
+}
+
+/* Footer Navigation Links */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 2rem, 3rem);
+  list-style-type: none;
+  padding: 0;
+  margin-block-end: 2rem;
+  flex-wrap: wrap; /* Better responsive behavior */
+}
+
+.footer-links li {
+  font-size: 1rem;
+  color: #e0e0e0;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+  padding: 0.5rem; /* Larger touch target */
+}
+
+.footer-links li::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%; /* Center animation */
+  background-color: #4a4e69;
+  transition: width 0.3s ease, left 0.3s ease;
+  border-radius: 2px; /* Rounded edges */
+}
+
+.footer-links li:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Social Icons */
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-icons-container img {
+  width: 30px;
+  aspect-ratio: 1; /* Modern way to maintain square */
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1);
+}
+
+.footer-icons-container img:hover {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Copyright Section */
+.footer-copyright {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  border-block-start: 1px solid rgba(255, 255, 255, 0.1);
+  padding-block-start: 1.5rem;
+  width: 100%;
+  max-width: 1200px; /* Prevent excessive width */
+}
+
+/* Modern reset for focus states */
+.footer a:focus-visible,
+.footer button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (prefers-reduced-motion: reduce) {
+  .footer *,
+  .footer *::before,
+  .footer *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+      padding: 2rem 1rem;
+  }
+  
+  .footer-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+  }
+}

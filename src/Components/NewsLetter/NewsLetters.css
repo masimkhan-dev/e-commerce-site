@@ -1,0 +1,84 @@
+.newsletter {
+    width: 80%;
+    max-width: 800px;
+    margin: 3rem auto; /* Centered and spaced vertically */
+    padding: 2rem;
+    text-align: center; /* Align content to center */
+    background: linear-gradient(180deg, #fde1ff 0%, #e1ffea 100%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.newsletter h1 {
+    font-size: 2rem; /* Bold header font size */
+    color: #333; /* Neutral dark color for the text */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter p {
+    font-size: 1rem; /* Paragraph font size */
+    color: #555; /* Slightly muted color for contrast */
+    margin-bottom: 1.5rem;
+}
+
+.newsletter div {
+    display: flex;
+    justify-content: center; /* Align input and button */
+    align-items: center;
+    gap: 1rem; /* Space between input and button */
+}
+
+.newsletter input {
+    width: 70%;
+    max-width: 400px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.newsletter input:focus {
+    border-color: #ff6f61; /* Accent color on focus */
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5); /* Glow effect */
+    outline: none;
+}
+
+.newsletter button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ff6f61; /* Accent button color */
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #e0554f; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.newsletter button:active {
+    transform: translateY(0); /* Reset on click */
+    background-color: #d24c48; /* Slightly darker for active state */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .newsletter input {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .newsletter div {
+        flex-direction: column; /* Stack input and button */
+        gap: 0.5rem; /* Reduce gap */
+    }
+
+    .newsletter button {
+        width: 100%; /* Full width button for mobile */
+    }
+}

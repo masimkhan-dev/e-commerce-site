@@ -1,0 +1,83 @@
+/* DescriptionBox.css */
+
+/* Main container for the description box */
+.description-box {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  }
+  
+  /* Heading for the description */
+  .description-box h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #007bff; /* Accent line under the heading */
+    padding-bottom: 8px;
+  }
+  
+  /* Description content */
+  .description-content {
+    max-height: 120px; /* Default height for collapsed state */
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  .description-content.expanded {
+    max-height: 500px; /* Expanded height */
+  }
+  
+  .description-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8; /* Improved readability with more line height */
+    margin-bottom: 16px;
+  }
+  
+  /* Read More/Less button */
+  .read-more-btn {
+    display: block;
+    margin-top: 16px;
+    padding: 10px 20px;
+    background-color: #E74F41; /* Primary button color */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .read-more-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  .read-more-btn:active {
+    transform: translateY(0); /* Reset lift effect on click */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .description-box {
+      padding: 16px;
+    }
+  
+    .description-box h2 {
+      font-size: 1.25rem;
+    }
+  
+    .description-content p {
+      font-size: 0.875rem;
+    }
+  
+    .read-more-btn {
+      width: 100%;
+      padding: 12px;
+    }
+  }

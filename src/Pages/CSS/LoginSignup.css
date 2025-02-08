@@ -1,0 +1,139 @@
+/* LoginSignup.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Container Styling */
+  .loginsignup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    padding: 20px;
+  }
+  
+  .loginsignup-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Heading Styling */
+  .loginsignup-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input Fields Styling */
+  .loginsignup-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .loginsignup-fields input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .loginsignup-fields input:focus {
+    border-color: #ff7e5f; /* Hero section accent color */
+  }
+  
+  /* Button Styling */
+  .loginsignup-container button {
+    width: 100%;
+    padding: 12px;
+    background: #ff7e5f; /* Hero section primary color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .loginsignup-container button:hover {
+    background: #feb47b; /* Hero section secondary color */
+  }
+  
+  /* Login Link Styling */
+  .loginsignup-login {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .loginsignup-login span {
+    color: #ff7e5f; /* Hero section accent color */
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .loginsignup-login span:hover {
+    color: #feb47b; /* Hero section secondary color */
+  }
+  
+  /* Checkbox Styling */
+  .loginsignup-agree {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .loginsignup-agree input {
+    cursor: pointer;
+  }
+  
+  .loginsignup-agree label {
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .loginsignup-container {
+      padding: 20px;
+    }
+  
+    .loginsignup-container h1 {
+      font-size: 20px;
+    }
+  
+    .loginsignup-fields input {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .loginsignup-container button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .loginsignup-login {
+      font-size: 12px;
+    }
+  
+    .loginsignup-agree label {
+      font-size: 12px;
+    }
+  }
